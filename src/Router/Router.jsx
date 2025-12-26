@@ -6,6 +6,7 @@ import MessageDisplay from "../Components/Common/MessageDisplay/MessageDisplay";
 import { notfound } from "../Components/Common/MessageDisplay/MessageDisplayTypes";
 import CarModify from "../Components/Cars/CarModify/CarModify";
 import CarsDisplay from "../Components/Cars/CarsDisplay/CarsDisplay";
+import CarInspect from "../Components/Cars/CarInspect/CarInspect";
 
 export const Router = (
     <Routes>
@@ -13,6 +14,7 @@ export const Router = (
             <Route index element={<HomePage />}/>
             <Route path="home" element={<Navigate replace to="/" />} />
             <Route path="cars" element={<CarsDisplay />} />
+            <Route path="cars/:id" element={<CarInspect />} />
             <Route path="cars/add" element={<CarModify />} />
             <Route path="cars/edit/:id" element={<CarModify />} />
             <Route path="*" element={

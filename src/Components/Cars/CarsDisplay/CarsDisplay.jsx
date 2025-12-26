@@ -59,6 +59,7 @@ function CarsDisplay() {
 							<td>{car.name}</td>
 							<td>{car.year}</td>
 							<td className="action-cell">
+								<NavButton typeName={primary} to={`/cars/${car.id}`}>🔍</NavButton>
 								<NavButton typeName={secondary} to={`/cars/edit/${car.id}`}>✏️</NavButton>
 								<NavButton typeName={danger} onClick={() => handleDelete(car.id)}>🗑️</NavButton>
 							</td>
